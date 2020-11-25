@@ -1,0 +1,9 @@
+#floorPlanImg{
+    width: 90%;
+    padding: 5vh 0 5vh 0;
+}
+/* The hyperlink in the header section*/
+section a{
+    font-weight: bold;
+    color: #4B90E6;
+}

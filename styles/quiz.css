@@ -1,0 +1,74 @@
+.contentBox{
+    background-color: #222E45;
+    width:50vmax;
+    height:auto;
+    margin:1%;
+    text-align: center;
+}
+#quizImg{
+    width:100%;
+    height: auto;
+}
+/*The text will scale larger on larger screens*/
+@media screen and (min-width:1000px) {
+	.contentBox, button{
+        font-size: 2.15vw !important;
+    }
+}
+/*The quiz box will gradually transition into visiblity once the quiz is startted*/
+#quiz{
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+/*The text should always be readable*/
+.contentBox. button{
+    font-size: calc(9px + 1vw);
+}
+#answers{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding:1%;
+    margin-bottom: 1%;
+}
+#quizProgress{
+    padding: 5px;
+}
+/*Quiz answer buttons, they need to have the global styling set on them again for some reason*/
+/*The buttons will gradually transition into the colour change when they are disabled*/
+button{
+    background-color: #172136;
+    border: none;
+    padding: 5px;
+    margin: 5px;
+    font-family: 'PT Serif', serif;
+    color: #CBD9F4;
+    font-weight: bold;
+    transition: background-color 0.25s ease-out;
+}
+button:hover{
+    cursor: pointer;
+    background-color: #313E59;
+}
+.answer{
+    width: 45%;
+}
+button:disabled{
+    transition: background-color 0.25s ease-out;
+    background-color: #313E59;
+}
+button:disabled:hover{
+    background-color: #313E59;
+    cursor:default;
+}
+#feedback{
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+#scoreFeedback{
+    display: none;
+}

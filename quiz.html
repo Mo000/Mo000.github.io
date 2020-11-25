@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>The Diamond Top Floor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/quiz.css">
+    <link rel="icon" href="img/favicon.png">
+    <meta name="author" content="Mohaned Al-Bassam">
+    <meta name="description" content="University of Sheffield: The Diamond Top Floor">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="wrapper">
+        <nav id="navbar">
+            <a href="index.html">HOME</a>
+            <a href="discover.html">DISCOVER</a>
+            <a class="selected" href="#">QUIZ</a>
+            <a href="blog.html">BLOG</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+        <section>
+            <span id="welcomeHeader">Can you guess which room each view is of?</span>
+            <p>Make sure to have a look at the floor plan on the discover page first.</p>
+        </section>
+        <main>
+            <header>
+                Test Yourself
+            </header>
+            <div id="mainContent">
+                <div class="contentBox">
+                    <button id="quizStartButton" onclick="StartQuiz()">Start Quiz</button>
+                    <div id="quiz">
+                        <div id="quizView">
+                            <div id="quizProgress"><span id="quizCurrentProgress">1</span>/5</div>
+                            <img alt="View of a certain room on the fourth floor" src="img/4.01.png" id="quizImg">
+                        </div>
+                        <div id="answers">
+                            <button class="answer" onclick="QuizAnswer('1')">4.01 Silent Study</button>
+                            <button class="answer" onclick="QuizAnswer('2')">4.07 Silent Study</button>
+                            <button class="answer" onclick="QuizAnswer('3')">4.03 Group Study</button>
+                            <button class="answer" onclick="QuizAnswer('4')">4.26 Silent Study</button>
+                        </div>
+                        <div id="feedback">
+                            <span id="quizFeedback"></span><span id="correctAnswer"></span>
+                            <span id="scoreFeedback"> You scored <span id="score"></span>/5! <span id="feedbackMessage"></span></span>
+                            <button id="quizNext" onclick="QuizNext()">Next View</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            Any images are not the property of the creators of this website and are only for educational purposes as part of an exception to the Copyright, Designs and Patents Act (1988) detailed for “non-commercial research or private study”
+        </footer>
+    </div>
+</body>
+<script src="scripts/quiz.js"></script>
+</html>
